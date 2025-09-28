@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/app.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+
+</head>
+<body class="p-2">
+
+    <!-- Header -->
+    <div class="d-flex align-items-center pt-2 pb-2">
+        <h1 class="me-2 text-white">Titre note</h1> 
+        <button class="btn p-0" 
+                style="width: 48px; height: 48px; border: none;" 
+                onclick="alert('it works, nice try diddy!')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                    <path fill="currentColor" d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2m5.4 21L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z"/>
+                </svg>
+        </button>
+    </div>
+    
+    <!-- Toolbar -->
+    <div class="bg-white p-2 rounded mb-3">
+        <!-- Export, Share, Save buttons-->
+        <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+            <!-- Left buttons -->
+            <div class="d-flex flex-wrap gap-2">
+                <div class="btn btn-danger d-flex align-items-center gap-1">
+                    <a href="#">Exporter sous</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M30 18v-2h-6v10h2v-4h3v-2h-3v-2zm-11 8h-4V16h4a3.003 3.003 0 0 1 3 3v4a3.003 3.003 0 0 1-3 3m-2-2h2a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2zm-6-8H6v10h2v-3h3a2.003 2.003 0 0 0 2-2v-3a2 2 0 0 0-2-2m-3 5v-3h3l.001 3z"/><path fill="currentColor" d="M22 14v-4a.91.91 0 0 0-.3-.7l-7-7A.9.9 0 0 0 14 2H4a2.006 2.006 0 0 0-2 2v24a2 2 0 0 0 2 2h16v-2H4V4h8v6a2.006 2.006 0 0 0 2 2h6v2Zm-8-4V4.4l5.6 5.6Z"/></svg>
+                </div>
+                <div class="btn btn-warning d-flex align-items-center gap-1">
+                    <a href="#">Publique</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M1 18q-.425 0-.712-.288T0 17v-.575q0-1.075 1.1-1.75T4 14q.325 0 .625.013t.575.062q-.35.525-.525 1.1t-.175 1.2V18zm6 0q-.425 0-.712-.288T6 17v-.625q0-.8.438-1.463t1.237-1.162T9.588 13T12 12.75q1.325 0 2.438.25t1.912.75t1.225 1.163t.425 1.462V17q0 .425-.287.713T17 18zm12.5 0v-1.625q0-.65-.162-1.225t-.488-1.075q.275-.05.563-.062T20 14q1.8 0 2.9.663t1.1 1.762V17q0 .425-.288.713T23 18zM4 13q-.825 0-1.412-.587T2 11q0-.85.588-1.425T4 9q.85 0 1.425.575T6 11q0 .825-.575 1.413T4 13m16 0q-.825 0-1.412-.587T18 11q0-.85.588-1.425T20 9q.85 0 1.425.575T22 11q0 .825-.575 1.413T20 13m-8-1q-1.25 0-2.125-.875T9 9q0-1.275.875-2.137T12 6q1.275 0 2.138.863T15 9q0 1.25-.862 2.125T12 12"/></svg>
+                </div>
+            </div>
+
+            <!-- Right button -->
+            <div class="btn btn-success d-flex align-items-center gap-1">
+                <a href="#">Enregistrer</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13 23v-3.075l5.525-5.5q.225-.225.5-.325t.55-.1q.3 0 .575.113t.5.337l.925.925q.2.225.313.5t.112.55t-.1.563t-.325.512l-5.5 5.5zM6 10h9V6H6zm13.575 7.4l.925-.975l-.925-.925l-.95.95zM11 21H5q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h12l4 4v5.3q-.475-.2-.987-.262T19 12.05t-.975.313t-.875.612L15 15.125V15q0-1.25-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18h.1L11 19.1z"/></svg>
+            </div>
+        </div>
+        
+        <!-- Text tool buttons -->
+        <div class="d-flex flex-wrap justify-content-between gap-2">
+            <!-- Styling buttons -->
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <button class="btn text-tool-btn d-flex align-items-center p-2 bg-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.8 19V5h5.525q1.625 0 3 1T16.7 8.775q0 1.275-.575 1.963t-1.075.987q.625.275 1.388 1.025T17.2 15q0 2.225-1.625 3.113t-3.05.887zm3.025-2.8h2.6q1.2 0 1.463-.612t.262-.888t-.262-.887t-1.538-.613H9.825zm0-5.7h2.325q.825 0 1.2-.425t.375-.95q0-.6-.425-.975t-1.1-.375H9.825z"/></svg></button>
+                <button class="btn text-tool-btn d-flex align-items-center p-2 bg-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19v-2.5h4l3-9H8V5h10v2.5h-3.5l-3 9H15V19z"/></svg></button>
+                <button class="btn text-tool-btn d-flex align-items-center p-2 bg-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21v-2h14v2zm7-4q-2.525 0-3.925-1.575t-1.4-4.175V3H9.25v8.4q0 1.4.7 2.275t2.05.875t2.05-.875t.7-2.275V3h2.575v8.25q0 2.6-1.4 4.175T12 17"/></svg></button>
+                <input type="color" class="form-control form-control-color p-1 bg-light" style="width: 40px; height: 40px;">
+                
+                <div class="d-flex flex-wrap align-items-center">
+                    <input type="hidden" name="heading" id="heading" readonly>
+                    <button class="btn text-tool-btn d-flex align-items-center p-2 bg-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M4.25 2.25A.75.75 0 0 1 5 3v4.25h6V3a.75.75 0 0 1 1.5 0v10a.75.75 0 0 1-1.5 0V8.75H5V13a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/></svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <button class="dropdown-item" id="h1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M14 4.25a.75.75 0 0 0-1.248-.56l-2.25 2a.75.75 0 0 0 .996 1.12l1.002-.89v5.83a.75.75 0 0 0 1.5 0zm-11.5 0a.75.75 0 0 0-1.5 0v7.496a.75.75 0 0 0 1.5 0V8.75h4v2.996a.75.75 0 0 0 1.5 0V4.25a.75.75 0 0 0-1.5 0v3h-4z" clip-rule="evenodd"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="h2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.5 4.25a.75.75 0 0 0-1.5 0v7.496a.75.75 0 0 0 1.5 0V8.75h4v2.996a.75.75 0 0 0 1.5 0V4.25a.75.75 0 0 0-1.5 0v3h-4zm8.403 1.783A1.364 1.364 0 0 1 12.226 5h.226a1.071 1.071 0 0 1 .672 1.906l-3.61 2.906a1.51 1.51 0 0 0 .947 2.688h3.789a.75.75 0 0 0 0-1.5h-3.793l-.003-.003l-.003-.004v-.004a.01.01 0 0 1 .004-.008l3.61-2.907A2.571 2.571 0 0 0 12.452 3.5h-.226c-1.314 0-2.46.894-2.778 2.17l-.038.148a.75.75 0 1 0 1.456.364z" clip-rule="evenodd"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="h3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.5 4.25a.75.75 0 0 0-1.5 0v7.496a.75.75 0 0 0 1.5 0V8.75h4v2.996a.75.75 0 0 0 1.5 0V4.25a.75.75 0 0 0-1.5 0v3h-4zm8.114 1.496c.202-.504.69-.834 1.232-.834h.28a.94.94 0 0 1 .929.796l.027.18a1.15 1.15 0 0 1-.911 1.303l-.8.16a.662.662 0 0 0 .129 1.31h1.21a.89.89 0 0 1 .882 1.017a1.67 1.67 0 0 1-1.414 1.414l-.103.015a1.81 1.81 0 0 1-1.828-.9l-.018-.033a.662.662 0 0 0-1.152.652l.018.032a3.13 3.13 0 0 0 3.167 1.559l.103-.015a2.99 2.99 0 0 0 2.537-2.537a2.21 2.21 0 0 0-1.058-2.216a2.47 2.47 0 0 0 .547-1.963l-.028-.179a2.26 2.26 0 0 0-2.237-1.919h-.28a2.65 2.65 0 0 0-2.46 1.666a.662.662 0 1 0 1.228.492" clip-rule="evenodd"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="h4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.25a.75.75 0 0 0-1.347-.454l-4 5.25A.75.75 0 0 0 9.5 10.25h3.25v1.496a.75.75 0 0 0 1.5 0V10.25h.25a.75.75 0 1 0 0-1.5h-.25zm-1.5 2.222V8.75h-1.736zM2.5 4.25a.75.75 0 1 0-1.5 0v7.496a.75.75 0 0 0 1.5 0V8.75h4v2.996a.75.75 0 0 0 1.5 0V4.25a.75.75 0 1 0-1.5 0v3h-4z" clip-rule="evenodd"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="h5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.5 4.25a.75.75 0 0 0-1.5 0v7.496a.75.75 0 0 0 1.5 0V8.75h4v2.996a.75.75 0 0 0 1.5 0V4.25a.75.75 0 0 0-1.5 0v3h-4zm8-.75a1.25 1.25 0 0 0-1.25 1.25V7.5a.75.75 0 0 0 1.221.584l.033-.022c.04-.024.118-.067.236-.112c.235-.091.643-.2 1.26-.2c.892 0 1.534.751 1.534 1.75c0 .366-.139.735-.413 1.01c-.265.268-.7.49-1.371.49c-.568 0-.905-.184-1.094-.336a1.2 1.2 0 0 1-.24-.26l-.002-.003a.75.75 0 0 0-1.335.684l.671-.335l-.67.336v.003l.003.003l.004.01l.012.02l.034.06q.042.071.119.174c.102.136.254.31.467.48c.436.348 1.099.664 2.031.664c1.027 0 1.86-.352 2.437-.933a2.94 2.94 0 0 0 .847-2.067c0-1.591-1.096-3.25-3.034-3.25a5.6 5.6 0 0 0-1.25.133V5H14a.75.75 0 0 0 0-1.5z" clip-rule="evenodd"/></svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="h6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M2.5 4.25a.75.75 0 0 0-1.5 0v7.496a.75.75 0 0 0 1.5 0V8.75h4v2.996a.75.75 0 0 0 1.5 0V4.25a.75.75 0 0 0-1.5 0v3h-4zm9.9 2.532a4.9 4.9 0 0 0-1.843.293L12.273 5c.888 0 1.293.251 1.801.566l.006.003a.75.75 0 0 0 .79-1.275c-.59-.365-1.286-.794-2.597-.794c-.992 0-1.855.424-2.442 1.255C9.267 5.553 9 6.665 9 8c0 1.326.246 2.438.802 3.24c.583.842 1.453 1.26 2.47 1.26c1.918 0 3.228-1.236 3.228-2.795c0-.984-.388-1.74-1.024-2.237c-.607-.474-1.372-.661-2.076-.686M11.056 5.62c-.225.32-.41.794-.498 1.455L12.272 5c-.522 0-.92.201-1.217.62m-.021 4.765c-.233-.336-.418-.849-.495-1.58c.048-.056.165-.165.436-.282c.372-.16.873-.26 1.371-.242c.503.018.926.15 1.206.369c.25.195.447.504.447 1.055c0 .58-.48 1.295-1.727 1.295c-.564 0-.956-.207-1.238-.615" clip-rule="evenodd"/></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Headings dropdown -->
+
+            <!-- Upload buttons -->
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 upolad-content">
+                <button class="btn text-tool-btn d-flex align-items-center p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
+                <button class="btn text-tool-btn d-flex align-items-center p-2"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21V3h10.8q-.4.675-.6 1.438T13 6q0 2.5 1.75 4.25T19 12q.525 0 1.025-.088T21 11.65V21zm3-4h12l-3.75-5l-3 4L9 13zm12-7V5.825L16.4 7.4L15 6l4-4l4 4l-1.4 1.4L20 5.825V10z"/></svg> </button> 
+            </div> 
+
+            <!-- Listing buttons -->
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
+                <!-- Unordered list--> 
+                <button class="btn text-tool-btn d-flex align-items-center p-2"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 19v-2h12v2zm0-6v-2h12v2zm0-6V5h12v2zM5 20q-.825 0-1.412-.587T3 18t.588-1.412T5 16t1.413.588T7 18t-.587 1.413T5 20m0-6q-.825 0-1.412-.587T3 12t.588-1.412T5 10t1.413.588T7 12t-.587 1.413T5 14m0-6q-.825 0-1.412-.587T3 6t.588-1.412T5 4t1.413.588T7 6t-.587 1.413T5 8"/></svg> </button> 
+                <!-- Ordered list --> 
+                <button class="btn text-tool-btn d-flex align-items-center p-2"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 22v-1.5h2.5v-.75H4v-1.5h1.5v-.75H3V16h3q.425 0 .713.288T7 17v1q0 .425-.288.713T6 19q.425 0 .713.288T7 20v1q0 .425-.288.713T6 22zm0-7v-2.75q0-.425.288-.712T4 11.25h1.5v-.75H3V9h3q.425 0 .713.288T7 10v1.75q0 .425-.288.713T6 12.75H4.5v.75H7V15zm1.5-7V3.5H3V2h3v6zM9 19v-2h12v2zm0-6v-2h12v2zm0-6V5h12v2z"/></svg> </button> 
+            </div>
+            
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group"> 
+                <button class="btn text-tool-btn d-flex align-items-center p-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21v-5h2v3h3v2zm13 0v-2h3v-3h2v5zM3 8V3h5v2H5v3zm16 0V5h-3V3h5v5z"/></svg> </button> 
+            </div>
+            
+        </div>
+
+        <!-- TextArea-->
+        <textarea id="noteContent" rows="15" class="form-control border-0 layout" rows="6" placeholder="Type your text here..."></textarea> </div> </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="./resources/app.js"></script>
+
+</body>
+</html>
