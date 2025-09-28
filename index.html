@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/app.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <title>Document</title>
 
 </head>
@@ -97,11 +98,11 @@
 
             <!-- Upload buttons -->
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3 upolad-content">
-                <button class="btn text-tool-btn d-flex align-items-center p-2">
+                <button class="btn text-tool-btn d-flex align-items-center p-2" id="addLinkBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
                 <button class="btn text-tool-btn d-flex align-items-center p-2"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21V3h10.8q-.4.675-.6 1.438T13 6q0 2.5 1.75 4.25T19 12q.525 0 1.025-.088T21 11.65V21zm3-4h12l-3.75-5l-3 4L9 13zm12-7V5.825L16.4 7.4L15 6l4-4l4 4l-1.4 1.4L20 5.825V10z"/></svg> </button> 
-            </div> 
+            </div>
 
             <!-- Listing buttons -->
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
@@ -116,7 +117,26 @@
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group"> 
                 <button class="btn text-tool-btn d-flex align-items-center p-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21v-5h2v3h3v2zm13 0v-2h3v-3h2v5zM3 8V3h5v2H5v3zm16 0V5h-3V3h5v5z"/></svg> </button> 
             </div>
+
             
+        </div>
+        
+        <div class="mb-3" id="addLinkLayout"> 
+            <div class="d-flex align-items-center gap-2 mb-2"> 
+                <label class="form-label mb-0" style="width: 100px;">Link to</label>
+                <input type="text" class="form-control dynamic-width" name="linkTarName" id="linkTarName" />
+            </div>
+
+            <div class="d-flex align-items-center gap-2 mb-2"> 
+                <label class="form-label mb-0" style="width: 100px;">URL</label>
+                <input type="text" class="form-control dynamic-width" name="linkUrl" id="linkUrl" />
+            </div>
+
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
+                <button class="btn text-tool-btn d-flex align-items-center p-2" id="submitLinkBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16"><path fill="currentColor" d="M12.49 7.14L3.44 2.27c-.76-.41-1.64.3-1.4 1.13l1.24 4.34q.075.27 0 .54l-1.24 4.34c-.24.83.64 1.54 1.4 1.13l9.05-4.87a.98.98 0 0 0 0-1.72Z"/></svg>
+                </button>    
+            </div>
         </div>
 
         <!-- TextArea-->
@@ -125,7 +145,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="./resources/app.js"></script>
-
 </body>
 </html>
