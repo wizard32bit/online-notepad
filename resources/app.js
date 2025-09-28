@@ -63,8 +63,6 @@ window.addEventListener('load', ()=>{
 
 addLinkBtn.addEventListener('click', function(){
   addLinkLayoutVisibility = !addLinkLayoutVisibility;
-  console.log(addLinkLayoutVisibility);
-  if(!addLinkLayoutVisibility) addLinkLayout.hidden= true;
-  else addLinkLayout.hidden= false;
+  addLinkLayout.hidden= !addLinkLayoutVisibility;
 });
 
