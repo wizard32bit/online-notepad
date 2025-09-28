@@ -56,8 +56,15 @@ document.querySelector('#submitLinkBtn').addEventListener('click', () => {
 const addLinkBtn= document.querySelector("#addLinkBtn");
 const addLinkLayout= document.querySelector("#addLinkLayout");
 let addLinkLayoutVisibility= false;
+
+window.addEventListener('load', ()=>{
+  addLinkLayout.hidden= true;
+});
+
 addLinkBtn.addEventListener('click', function(){
   addLinkLayoutVisibility = !addLinkLayoutVisibility;
-  if(!addLinkLayoutVisibility) addLinkLayout.remove();
-  else document.appendChild(addLinkLayout);
+  console.log(addLinkLayoutVisibility);
+  if(!addLinkLayoutVisibility) addLinkLayout.hidden= true;
+  else addLinkLayout.hidden= false;
 });
+
