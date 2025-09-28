@@ -98,9 +98,12 @@
 
             <!-- Upload buttons -->
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3 upolad-content">
+                <!-- add Link -->
                 <button class="btn text-tool-btn d-flex align-items-center p-2" id="addLinkBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
-                <button class="btn text-tool-btn d-flex align-items-center p-2"> 
+                
+                <!-- Image Button -->
+                <button class="btn text-tool-btn d-flex align-items-center p-2" id="imageBtn"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21V3h10.8q-.4.675-.6 1.438T13 6q0 2.5 1.75 4.25T19 12q.525 0 1.025-.088T21 11.65V21zm3-4h12l-3.75-5l-3 4L9 13zm12-7V5.825L16.4 7.4L15 6l4-4l4 4l-1.4 1.4L20 5.825V10z"/></svg> </button> 
             </div>
 
@@ -121,15 +124,16 @@
             
         </div>
         
+        <!-- a "form" for submitting the data related to the link to add -->
         <div class="mb-3" id="addLinkLayout"> 
             <div class="d-flex align-items-center gap-2 mb-2"> 
                 <label class="form-label mb-0" style="width: 100px;">Link to</label>
-                <input type="text" class="form-control dynamic-width" name="linkTarName" id="linkTarName" />
+                <input type="text" class="form-control" name="linkTarName" id="linkTarName" />
             </div>
 
             <div class="d-flex align-items-center gap-2 mb-2"> 
                 <label class="form-label mb-0" style="width: 100px;">URL</label>
-                <input type="text" class="form-control dynamic-width" name="linkUrl" id="linkUrl" />
+                <input type="text" class="form-control" name="linkUrl" id="linkUrl" />
             </div>
 
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
@@ -138,6 +142,16 @@
                 </button>    
             </div>
         </div>
+
+
+        <div class="mb-3" id="imageInputLayout">
+             <div class="d-flex align-items-center gap-2 mb-2"> 
+                <label class="form-label mb-0">Image</label>
+                <input type="file" accept="image/*" class="form-control" name="imageInput" id="imageInput" />
+            </div>
+        </div>
+
+
 
         <!-- TextArea-->
         <textarea id="noteContent" rows="15" class="form-control border-0 layout" rows="6" placeholder="Type your text here..."></textarea> </div> </div>

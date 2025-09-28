@@ -11,26 +11,8 @@ dropdownItems.forEach(item => {
         dropdownButton.innerHTML = item.innerHTML;
         headingInput.value= item.id;
         console.log(headingInput.value);
-
     });
 });
-
-
-
-// link upload dynamic width
-document.querySelectorAll(".dynamic-width").forEach(input => {
-    const baseWidth = 50; // min width in pixels
-    const perChar = 25;    // width per character (approx)
-
-    function resize() {
-      const length = input.value.length;
-      input.style.width = Math.max(baseWidth, length * perChar) + "px";
-    }
-
-    input.addEventListener("input", resize);
-    resize(); // initialize on page load
-  });
-
 
 
 
@@ -60,4 +42,13 @@ addLinkBtn.addEventListener('click', function(){
   addLinkLayoutVisibility = !addLinkLayoutVisibility;
   if(!addLinkLayoutVisibility) addLinkLayout.remove();
   else document.appendChild(addLinkLayout);
+});
+
+const imageBtn= document.querySelector('#imageBtn');
+const imageInputLayout= document.querySelector('#imageInputLayout');
+
+let imageInputLayoutVisiblity= false;
+imageBtn.addEventListener('click', ()=>{
+  imageInputLayoutVisiblity= !imageInputLayoutVisiblity;
+  imageInputLayout.hidden= !imageInputLayoutVisiblity;
 });
