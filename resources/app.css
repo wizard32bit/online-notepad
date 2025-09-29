@@ -16,6 +16,7 @@ textarea{
 button > svg, svg {
     color: #fff;
 }
+
 .text-tool-btn svg, .dropdown-item svg{
     color: #000
 }
