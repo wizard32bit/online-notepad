@@ -28,3 +28,14 @@ button > svg, svg {
 .main-container{
     border: 2px solid rgba(255,255,255, 0); border-radius: 0 0 10px 10px; border-top: none;
 }
+
+
+#notePreview{
+    min-height: 19em;
+    cursor: auto;
+}
+
+#noteContent{
+    /* cursor: text; */
+    cursor: text;
+}

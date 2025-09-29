@@ -44,6 +44,7 @@ let addLinkLayoutVisibility= false;
 addLinkBtn.addEventListener('click', function(){
   addLinkLayoutVisibility = !addLinkLayoutVisibility;
   addLinkLayout.hidden= !addLinkLayoutVisibility;
+  
 });
 
 const notePreview= document.querySelector('#notePreview');
@@ -59,8 +60,8 @@ previewBtn.addEventListener('click', ()=>{
   textarea.hidden= !notePreview.hidden;
   // set bootstrap css classes
   let btn_classes={
-    'previewOn': "btn-secondary",
-    'previewOff': "btn-primary"
+    'previewOn': "btn-primary",
+    'previewOff': "btn-secondary"
   };
 
   // preview mode: btn-secondary
@@ -94,9 +95,16 @@ previewBtn.addEventListener('click', ()=>{
 
 });
 
+textarea.addEventListener('input', () => {
+  const markdownText = textarea.value;
+  const html = marked.parse(markdownText);
+  notePreview.innerHTML = DOMPurify.sanitize(html);
+});
+
+
 window.addEventListener('load', ()=>{
   addLinkLayout.hidden= notePreview.hidden= true;
-  previewBtn.classList.add("btn-primary");
+  previewBtn.classList.add("btn-secondary");
 });
 
 const fullScreenBtn= document.querySelector('#fullScreenBtn');
