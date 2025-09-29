@@ -20,3 +20,11 @@ button > svg, svg {
 .text-tool-btn svg, .dropdown-item svg{
     color: #000
 }
+
+
+.toast-title{
+    width: fit-content; background-color: rgba(217, 217, 217, 0.69);border: 1px solid rgba(217, 217, 217, 0); border-bottom: none; border-radius: 10px 10px 0 0;
+}
+.main-container{
+    border: 2px solid rgba(255,255,255, 0); border-radius: 0 0 10px 10px; border-top: none;
+}
