@@ -130,7 +130,8 @@ document.querySelector('#submitLinkBtn').addEventListener('click', () => {
   textarea.value += ` [${name}](${url}) `;
 });
 
-const addLinkBtn= document.querySelector("#addLinkBtn");
+
+const addLinkBtn= document.querySelector("#linkBtn");
 const addLinkLayout= document.querySelector("#addLinkLayout");
 let addLinkLayoutVisibility= false;
 

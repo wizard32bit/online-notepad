@@ -49,15 +49,22 @@
         </div>
         
         <!-- Text tool buttons -->
-        
         <div title="Text tool buttons" class="d-flex flex-wrap justify-content-between gap-2">
             <!-- Styling buttons -->
             <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                <!-- Bold -->
                 <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.8 19V5h5.525q1.625 0 3 1T16.7 8.775q0 1.275-.575 1.963t-1.075.987q.625.275 1.388 1.025T17.2 15q0 2.225-1.625 3.113t-3.05.887zm3.025-2.8h2.6q1.2 0 1.463-.612t.262-.888t-.262-.887t-1.538-.613H9.825zm0-5.7h2.325q.825 0 1.2-.425t.375-.95q0-.6-.425-.975t-1.1-.375H9.825z"/></svg></button>
+                
+                <!-- Italic -->
                 <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19v-2.5h4l3-9H8V5h10v2.5h-3.5l-3 9H15V19z"/></svg></button>
+                
+                <!-- Underlined -->
                 <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21v-2h14v2zm7-4q-2.525 0-3.925-1.575t-1.4-4.175V3H9.25v8.4q0 1.4.7 2.275t2.05.875t2.05-.875t.7-2.275V3h2.575v8.25q0 2.6-1.4 4.175T12 17"/></svg></button>
+                
+                <!-- font color -->
                 <input type="color" class="btn text-tool-btn bg-light form-control-color p-1" style="width: 40px; height: 40px;">
                 
+                <!-- Heading styling -->
                 <div class="d-flex flex-wrap align-items-center">
                     <input type="hidden" name="heading" id="heading" readonly>
                     <button class="btn text-tool-btn bg-light d-flex align-items-center p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -98,12 +105,14 @@
                 </div>
             </div>
 
-            <!-- Upload buttons -->
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 upolad-content">
-                <button class="btn text-tool-btn d-flex align-items-center p-2" id="addLinkBtn">
+            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group"></div>
+                <!-- link Button -->
+                <button class="btn text-tool-btn d-flex align-items-center p-2" id="linkBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
-                <button class="btn text-tool-btn d-flex align-items-center p-2"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21V3h10.8q-.4.675-.6 1.438T13 6q0 2.5 1.75 4.25T19 12q.525 0 1.025-.088T21 11.65V21zm3-4h12l-3.75-5l-3 4L9 13zm12-7V5.825L16.4 7.4L15 6l4-4l4 4l-1.4 1.4L20 5.825V10z"/></svg> </button> 
+                
+                <!-- Upload buttons -->
+                <button class="btn text-tool-btn d-flex align-items-center p-2" id="fileBtn"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 16V7.85l-2.6 2.6L7 9l5-5l5 5l-1.4 1.45l-2.6-2.6V16zm-5 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"/></svg>
             </div>
 
             <!-- Listing buttons -->
@@ -165,9 +174,8 @@
         </div>
 
         <!-- TextArea-->
-         
-        <textarea id="noteContent" rows="15" class="form-control border-0 layout" rows="6" placeholder="Type your text here..."></textarea>
-        <textarea id="notePreview" rows="15" class="form-control border-0 layout" rows="6" placeholder="Markdown from #noteContent" readonly></textarea>
+        <textarea id="noteContent" rows="15" class="form-control border-0 layout mb-2" rows="6" placeholder="Type your text here..."></textarea>
+        <div id="notePreview" rows="15" class="form-control border-0 layout mb-2" rows="6" placeholder="Markdown from #noteContent"></div>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
