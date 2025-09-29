@@ -23,27 +23,6 @@ this.style.height = this.scrollHeight + "px"; // set to content height
 });
 
 
-
-const linkUrl = document.getElementById('linkUrl');
-const linkTarName = document.getElementById('linkTarName');
-
-document.querySelector('#submitLinkBtn').addEventListener('click', () => {
-  const url = linkUrl.value.length > 0 ? linkUrl.value : '#';
-  const name = linkTarName.value.length > 0 ? linkTarName.value : url;
-
-  // Append Markdown link syntax instead of raw <a> tag
-  textarea.value += ` [${name}](${url}) `;
-});
-
-const addLinkBtn= document.querySelector("#addLinkBtn");
-const addLinkLayout= document.querySelector("#addLinkLayout");
-let addLinkLayoutVisibility= false;
-addLinkBtn.addEventListener('click', function(){
-  addLinkLayoutVisibility = !addLinkLayoutVisibility;
-  if(!addLinkLayoutVisibility) addLinkLayout.remove();
-  else document.appendChild(addLinkLayout);
-});
-
 const imageBtn= document.querySelector('#imageBtn');
 const imageInputLayout= document.querySelector('#imageInputLayout');
 
