@@ -53,25 +53,17 @@ svg {
 
 
 div > .form-label{
-    width: 100px;
+    width: 120px;
 }
 
-
-#imgContainer {
-  position: relative;     /* needed for absolute positioning inside */
-  display: inline-block;
-}
 
 #imgContainer img {
   display: block;
-  max-width: 25%;
+  max-width: 40%;
   height: auto;
 }
 
 #imgContainer .closeBtn {
-  position: absolute;
-  top: 8px;               /* distance from top */
-  right: 8px;             /* distance from right */
   background-color: red;
   border: none;
   border-radius: 10%;
@@ -91,3 +83,6 @@ div > .form-label{
   width: 18px;
   height: 18px;
 }
+
+
+

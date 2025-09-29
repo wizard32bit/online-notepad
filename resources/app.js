@@ -1,6 +1,5 @@
 const textarea = document.getElementById("noteContent");
 const previewContainer=  document.querySelector('#preview');
-let textareaContentArray= [];
 
 // dynamic assignment of heading
 const dropdownButton = document.querySelector('.dropdown-toggle'); 
@@ -20,93 +19,80 @@ dropdownItems.forEach(item => {
 
   // auto height on textarea input
 textarea.addEventListener("input", function () {
+
   previewContainer.innerHTML= marked.parse(textarea.value);
-  this.style.height = "auto";            // reset height
+  this.style.height = "auto";       // reset height
   this.style.height = this.scrollHeight + "px"; // set to content height
 });
 
 
-const imageBtn= document.querySelector('#imageBtn');
-const imageInputLayout= document.querySelector('#imageInputLayout');
-const imageInput= document.querySelector('#imageInput');
-const imageUploadErrorSpan= document.querySelector('#imageUploadErrorSpan');
-const imageDescription= document.querySelector('#imageDescription');
-const imagePreview= document.querySelector('.imgPreview');
+const fileBtn= document.querySelector('#fileBtn');
+const fileInputLayout= document.querySelector('#fileInputLayout');
+const fileInput= document.querySelector('#fileInput');
+const fileUploadErrorSpan= document.querySelector('#fileUploadErrorSpan');
+const filePreview= document.querySelector('.imgPreview');
+const fileUploadLabel= document.querySelector('#fileUploadLabel');
 
 
-let imageInputLayoutVisiblity= false;
-imageBtn.addEventListener('click', ()=>{
-  imageInputLayoutVisiblity= !imageInputLayoutVisiblity;
-  imageInputLayout.hidden= !imageInputLayoutVisiblity;
+// image description span (under the image)
+const imageDescriptionInput= document.querySelector('#imageDescriptionInput');
+const imageDescriptionContainer= document.querySelector('#imageDescriptionContainer');
+
+
+let fileInputLayoutVisiblity= false;
+fileBtn.addEventListener('click', ()=>{
+  fileInputLayoutVisiblity= !fileInputLayoutVisiblity;
+  fileInputLayout.hidden= !fileInputLayoutVisiblity;
 });
 
 // Allowed types
-const allowedTypes = ["image/jpeg", "image/png", "application/pdf"];
+const allowedTypes = {
+    "image":["image/jpeg", "image/png"], 
+    "pdf": ["application/pdf"]
+};
+
+const allAllowedTypes= [...allowedTypes.image, ...allowedTypes.pdf];
 // Max size (e.g. 2 MB)
 const maxSize = 2 * 1024 * 1024;
 
+fileInput.addEventListener("change", () => {
 
-let countImgPreviews=0;
-let imgPreviewArr= [];
-imageInput.addEventListener("change", () => {
-  const image = imageInput.files[0];
-  if (!image) return;
+  const file = fileInput.files[0];
+  if (!file) return;
 
   // Reset error span before validation
-  imageUploadErrorSpan.textContent = "";
-  imageUploadErrorSpan.classList.add("d-none");
-  imageDescription.value= "";
+  fileUploadErrorSpan.textContent = "";
+  fileUploadErrorSpan.classList.add("d-none");
+  imageDescriptionContainer.classList.add("d-none");
 
-  // Validate type
-  if (!allowedTypes.includes(image.type) || image.size > maxSize) {
-    if(!allowedTypes.includes(image.type)){
-      imageUploadErrorSpan.textContent =
-      "Invalid file type. Please upload JPEG, PNG, or PDF.";
-    }else if (image.size > maxSize) {
-      // Validate size
-      imageUploadErrorSpan.textContent = "File too large. Max allowed size is 2 MB.";
-    } 
-    imageUploadErrorSpan.classList.remove("d-none");
-    imageInput.value = ""; // reset file input
-    return;
+  if(!allAllowedTypes.includes(file.type) || file.size > maxSize){
+    let msg= null;
+    //if file type is not supported or file size is above max
+    if(!allAllowedTypes.includes(file.type)){
+      //if file type is not supported
+      msg= "Type fichier invalide. Veuillez déposer un fichier de type JPEG, PNG ou PDF";
+    }else if(file.size > maxSize){
+      //if file size is above max
+      msg= "La taille du fichier ne doit pas dépasser 2MB";
+    }
+    fileUploadErrorSpan.textContent= msg;
+    fileUploadErrorSpan.classList.remove("d-none");
+
   }else{
-    imageUploadErrorSpan.classList.add("d-none"); // hide errors if valid
-    const imageUrl = URL.createObjectURL(image);
-    imageDescription.value= imageDescription.value.length > 0 ? imageDescription.value : image.name.split('.').slice(0, -1).join('.'); ;
-    let content= `<section id='section${++countImgPreviews}'>
-                        <div id='imgPreview${countImgPreviews}' class='imgPreview' >
-                          <div id="imgContainer">
-                              <button class='closeBtn' onclick="removeImage('section${countImgPreviews}')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-dasharray="12" stroke-dashoffset="12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12l7 7M12 12l-7 -7M12 12l-7 7M12 12l7 -7"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="12;0"/></path></svg>
-                              </button>
-                              <img src="${imageUrl}" />
-                          </div>
-                          <span class='imageCaption'>${imageDescription.value}</span>
-                      </div>
-                      </section>`;
+    //if file type is supported (image/PDF) && file size is lessEqual to max
+    if(allowedTypes.image.includes(file.type)){
+      //if file type is image
+      imageDescriptionContainer.classList.remove("d-none"); 
+      imageDescriptionInput.value= removeExtension(file.name);
     
-    textareaContentArray.push({'id': countImgPreviews, 'content': content});
-    console.log(textareaContentArray);
-    renderPreview();
+    }else if(allowedTypes.pdf.includes(file.type)){
+      //if file type is pdf
+    }
+
+    fileUploadLabel.textContent= file.type;
   }
 });
 
-
-const closeButtons = document.getElementsByClassName('closeBtn');
-
-function removeImage(parentId){
-  textareaContentArray =textareaContentArray.filter( (elm) => elm.id !== parentId );
-  const parentToRemove= document.getElementById(parentId);
-  if(parentToRemove) parentToRemove.remove();
-
+function removeExtension(fileName) {
+  return fileName.substring(0, fileName.lastIndexOf(".")) || fileName;
 }
-
-
-function renderPreview(){
-  textareaContentArray.forEach(elm => {
-    textarea.value+= elm.content;
-    previewContainer.innerHTML+= marked.parse(elm.content);
-  });
-}
-
-renderPreview();
