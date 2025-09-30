@@ -5,81 +5,24 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-image: linear-gradient(to bottom, #004AAD 68%, #CB6CE6 100% );
 }
-div > a{
-    color: #fff;
-    text-decoration: none;
-}
-textarea{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-}
 
-button > svg, svg {
-    color: #fff;
-}
-
-.text-tool-btn svg, .dropdown-item svg{
-    color: #000
-}
-
-
-
-
-#preview .imgPreview {
-  display: flex;            /* stack children vertically */
-  flex-direction: column;   /* vertical layout */
-  align-items: center;      /* center horizontally */
-  padding: 20px;
-  gap: 8px;                 /* space between image and caption */
-}
-
-#preview .imgPreview .imgCaption {
-  text-decoration: underline;   /* underline text */
-  text-decoration-color: blue;  /* blue underline */
-  color: #333;                  /* optional text color */
-  font-size: 0.9rem;
+svg{
+  color: #fff;
   text-align: center;
+}
+
+.text-tool-btn svg {
+  color: #000;
 }
 
 .errorSpan{
     background-color: rgba(255, 20, 40, 0.5);
-    padding: 5px;
     border: 2px solid transparent;
     border-radius: 5px;
     width: 100%;
+    padding: 10px;
 }
-
 
 div > .form-label{
     width: 120px;
 }
-
-
-#imgContainer img {
-  display: block;
-  max-width: 40%;
-  height: auto;
-}
-
-#imgContainer .closeBtn {
-  background-color: red;
-  border: none;
-  border-radius: 10%;
-  padding: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-    width: 24px;
-}
-
-.closeBtn svg {
-    color: #fff;
-}
-
-#imgContainer .closeBtn svg {
-  width: 18px;
-  height: 18px;
-}
-
-
-

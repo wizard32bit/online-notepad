@@ -8,7 +8,7 @@
     <title>Notepad</title>
 
 </head>
-<body class="p-2">
+<body class="p-3">
 
     <!-- Header -->
     <div class="d-flex align-items-center p-1 toast-title">
@@ -20,10 +20,10 @@
         </button>
     </div>
     
-    <div class="bg-white p-2 mb-3 main-container">
+    <div class="bg-white mb-3 d-flex flex-wrap gap-4 p-2">
         <!-- Toolbar -->
         <!-- Export, Share, Save buttons-->
-        <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+        <div class="d-flex justify-content-between w-100 p-2">
             <!-- Left buttons -->
             <div class="d-flex flex-wrap gap-2">
                 <!-- Export -->
@@ -49,11 +49,11 @@
         </div>
         
         <!-- Text tool buttons -->
-        <div title="Text tool buttons" class="d-flex flex-wrap justify-content-between gap-2">
+        <div class="d-flex justify-content-between w-100 p-2">
             <!-- Styling buttons -->
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <div class="d-flex flex-wrap align-items-center listing-btn-group gap-2">
                 <!-- Bold -->
-                <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.8 19V5h5.525q1.625 0 3 1T16.7 8.775q0 1.275-.575 1.963t-1.075.987q.625.275 1.388 1.025T17.2 15q0 2.225-1.625 3.113t-3.05.887zm3.025-2.8h2.6q1.2 0 1.463-.612t.262-.888t-.262-.887t-1.538-.613H9.825zm0-5.7h2.325q.825 0 1.2-.425t.375-.95q0-.6-.425-.975t-1.1-.375H9.825z"/></svg></button>
+                <button class="btn text-tool-btn bg-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.8 19V5h5.525q1.625 0 3 1T16.7 8.775q0 1.275-.575 1.963t-1.075.987q.625.275 1.388 1.025T17.2 15q0 2.225-1.625 3.113t-3.05.887zm3.025-2.8h2.6q1.2 0 1.463-.612t.262-.888t-.262-.887t-1.538-.613H9.825zm0-5.7h2.325q.825 0 1.2-.425t.375-.95q0-.6-.425-.975t-1.1-.375H9.825z"/></svg></button>
                 
                 <!-- Italic -->
                 <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19v-2.5h4l3-9H8V5h10v2.5h-3.5l-3 9H15V19z"/></svg></button>
@@ -66,7 +66,6 @@
                 
                 <!-- Heading styling -->
                 <div class="d-flex flex-wrap align-items-center">
-                    <input type="hidden" name="heading" id="heading" readonly>
                     <button class="btn text-tool-btn bg-light d-flex align-items-center p-2 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M4.25 2.25A.75.75 0 0 1 5 3v4.25h6V3a.75.75 0 0 1 1.5 0v10a.75.75 0 0 1-1.5 0V8.75H5V13a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75" clip-rule="evenodd"/></svg>
                     </button>
@@ -105,18 +104,8 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group"></div>
-                <!-- link Button -->
-                <button class="btn text-tool-btn d-flex align-items-center p-2" id="linkBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
-                
-                <!-- Upload buttons -->
-                <button class="btn text-tool-btn d-flex align-items-center p-2" id="fileBtn"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 16V7.85l-2.6 2.6L7 9l5-5l5 5l-1.4 1.45l-2.6-2.6V16zm-5 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"/></svg>
-            </div>
-
             <!-- Listing buttons -->
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
+            <div class="d-flex flex-wrap align-items-center listing-btn-group gap-2">
                 <!-- Unordered list--> 
                 <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M9 19v-2h12v2zm0-6v-2h12v2zm0-6V5h12v2zM5 20q-.825 0-1.412-.587T3 18t.588-1.412T5 16t1.413.588T7 18t-.587 1.413T5 20m0-6q-.825 0-1.412-.587T3 12t.588-1.412T5 10t1.413.588T7 12t-.587 1.413T5 14m0-6q-.825 0-1.412-.587T3 6t.588-1.412T5 4t1.413.588T7 6t-.587 1.413T5 8"/></svg> </button> 
@@ -124,58 +113,54 @@
                 <button class="btn text-tool-btn bg-light d-flex align-items-center p-2"> 
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 22v-1.5h2.5v-.75H4v-1.5h1.5v-.75H3V16h3q.425 0 .713.288T7 17v1q0 .425-.288.713T6 19q.425 0 .713.288T7 20v1q0 .425-.288.713T6 22zm0-7v-2.75q0-.425.288-.712T4 11.25h1.5v-.75H3V9h3q.425 0 .713.288T7 10v1.75q0 .425-.288.713T6 12.75H4.5v.75H7V15zm1.5-7V3.5H3V2h3v6zM9 19v-2h12v2zm0-6v-2h12v2zm0-6V5h12v2z"/></svg> </button> 
             </div>
+
+            <div class="d-flex flex-wrap align-items-center listing-btn-group gap-2">
+                <!-- link Button -->
+                <button class="btn bg-light text-tool-btn align-items-center p-2" id="linkBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
+                
+                <!-- Upload buttons -->
+                <button class="btn btn-light text-tool-btn d-flex align-items-center p-2" id="fileBtn"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 16V7.85l-2.6 2.6L7 9l5-5l5 5l-1.4 1.45l-2.6-2.6V16zm-5 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"/></svg>
+            </div>
             
 
             <!-- fullScreen button -->
-            <div id="fullScreenBtn" class="d-flex flex-wrap align-items-center gap-2 mb-3"> 
-                <button id="fullScreenBtnSvgContainer" class="btn text-tool-btn bg-light d-flex align-items-center p-2">
+            <div class="d-flex flex-wrap align-items-center listing-btn-group" id="fullScreenBtn">
+                <button id="fullScreenBtnSvgContainer" class="btn btn-light text-tool-btn d-flex align-items-center p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 21v-5h2v3h3v2zm13 0v-2h3v-3h2v5zM3 8V3h5v2H5v3zm16 0V5h-3V3h5v5z"/></svg>
             </div>
         </div>
 
-       <!-- file input layout 
+        <!-- file input layout 
             alert alert-success
-         -->
-        <div title="file input layout" class="mb-3 alert alert-success" id="fileInputLayout">
-            <div class="d-flex align-items-center gap-2 mb-2"> 
-                <label for="fileInput" class="form-label mb-0" id="fileUploadLabel">Fichier</label>
-                <input type="file" accept="image/*,application/pdf" class="form-control" name="fileInput" id="fileInput" />
+        -->
+        <div class="flex-wrap gap-4 w-100 p-2" id="fileInputLayout">
+            <div class="d-flex justify-content-between gap-2">
+                <!-- file inoput -->
+                <div class="d-flex align-items-center gap-2 w-100 p-2 mb-2"> 
+                    <label for="fileInput" class="form-label" id="fileUploadLabel">Fichier</label>
+                    <input type="file" accept="image/*,application/pdf" class="form-control" name="fileInput" id="fileInput" />
+                </div>
+
+                <!-- Description -->
+                <div class="d-flex align-items-center gap-2 d-none mb-2" id="imageDescriptionContainer"> 
+                    <label for="imageDescriptionInput" class="form-label mb-0">Description</label>
+                    <input type="text" class="form-control" name="imageDescription" id="imageDescriptionInput" />
+                </div>
+            </div>
+                
+            <!-- error span -->
+            <div class="d-flex align-items-center mb-2">
+                <span id="fileUploadErrorspan" class="d-none errorSpan"></span>
             </div>
 
-            <div class="d-flex align-items-center gap-2 mb-2 d-none" id="imageDescriptionContainer"> 
-                <label for="imageDescriptionInput" class="form-label mb-0">Description</label>
-                <input type="text" class="form-control" name="imageDescription" id="imageDescriptionInput" />
-            </div>
-
-            <div class="mt-3 d-flex">
-                <span id="fileUploadErrorspan" class="errorSpan d-none"></span>
-            </div>
-
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group"> 
+            <div class="d-flex justify-content-between"> 
                 <button class="btn btn-primary d-flex align-items-center p-2 gap-2">
                     <span>Joindre</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 19h2v-4.175l1.6 1.6L16 15l-4-4l-4 4l1.425 1.4L11 14.825zm-5 3q-.825 0-1.412-.587T4 20V4q0-.825.588-1.412T6 2h8l6 6v12q0 .825-.587 1.413T18 22zm7-13h5l-5-5z"/></svg>
             </div>
-
         </div>
-
-
-        </div>
-
-        <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
-            <button class="btn d-flex align-items-center p-2 gap-2" id="previewBtn">
-                <span id="previewBtnSpan">Voir</span>
-                <div id="previewBtnSvgContainer">
-                    <svg id="previewBtnSvgSetPreviewOn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm0-2h14V7H5zm7-2q-2.05 0-3.662-1.112T6 13q.725-1.775 2.338-2.887T12 9t3.663 1.113T18 13q-.725 1.775-2.337 2.888T12 17m0-2.5q-.625 0-1.062-.437T10.5 13t.438-1.062T12 11.5t1.063.438T13.5 13t-.437 1.063T12 14.5m0 1q1.05 0 1.775-.725T14.5 13t-.725-1.775T12 10.5t-1.775.725T9.5 13t.725 1.775T12 15.5"/>
-                    </svg>
-                </div>
-            </button>
-        </div>
-
-        <!-- TextArea-->
-        <textarea id="noteContent" rows="15" class="form-control border-0 layout mb-2" rows="6" placeholder="Type your text here..."></textarea>
-        <div id="notePreview" rows="15" class="form-control border-0 layout mb-2" rows="6" placeholder="Markdown from #noteContent"></div>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
