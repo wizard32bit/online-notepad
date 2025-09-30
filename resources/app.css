@@ -26,3 +26,7 @@ svg{
 div > .form-label{
     width: 120px;
 }
+.note-utilities-link > a {
+  color: #fff;
+  text-decoration: none;
+}
