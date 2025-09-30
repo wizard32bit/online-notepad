@@ -116,7 +116,7 @@
 
             <div class="d-flex flex-wrap align-items-center listing-btn-group gap-2">
                 <!-- link Button -->
-                <button class="btn bg-light text-tool-btn align-items-center p-2" id="linkBtn">
+                <button class="btn bg-light text-tool-btn align-items-center p-2" id="addLinkBtn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
                 
                 <!-- Upload buttons -->
@@ -163,19 +163,19 @@
         </div>
 
 
-        <div class="mb-3" id="addLinkLayout"> 
-            <div class="d-flex align-items-center gap-2 mb-2"> 
-                <label class="form-label mb-0" style="width: 100px;">Link to</label>
+        <div class="flex-wrap gap-4 w-100 p-2" id="addLinkLayout"> 
+            <div class="d-flex justify-content-between gap-2 mb-2"> 
+                <label class="form-label">Titre page</label>
                 <input type="text" class="form-control" name="linkTarName" id="linkTarName" />
             </div>
 
-            <div class="d-flex align-items-center gap-2 mb-2"> 
-                <label class="form-label mb-0" style="width: 100px;">URL</label>
+            <div class="d-flex align-items-center gap-2 mb-4"> 
+                <label class="form-label">URL</label>
                 <input type="text" class="form-control" name="linkUrl" id="linkUrl" />
             </div>
 
-            <div class="d-flex flex-wrap align-items-center gap-2 mb-3 listing-btn-group">
-                <button class="btn btn-secondary d-flex align-items-center p-2 gap-2" id="submitLinkBtn">
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <button class="btn btn-primary d-flex align-items-center p-2 gap-2" id="submitLinkBtn">
                     <span>Ajouter</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17H7q-2.075 0-3.537-1.463T2 12t1.463-3.537T7 7h4v2H7q-1.25 0-2.125.875T4 12t.875 2.125T7 15h4zm-3-4v-2h8v2zm5 4v-2h4q1.25 0 2.125-.875T20 12t-.875-2.125T17 9h-4V7h4q2.075 0 3.538 1.463T22 12t-1.463 3.538T17 17z"/></svg> </button>
             </div>
         </div>
